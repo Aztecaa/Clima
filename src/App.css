@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  font-size: 12px;
+}
+body{
+  padding-top: 20px;
+  background-color: grey;
+}
+
+.container{
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px;
+  margin: auto;
+  background-color: #fff;
+  width: 300px;
+}
+.inf{
+  display: flex;
+  justify-content: space-evenly;
+}
+.title h2{
+  text-align: center;
+  font-size: 12px;
+}
+img{
+  width: 50px;
+}
+button{
+  background-color: brown;
+  border: none;
+}
