@@ -6,7 +6,7 @@ function App() {
   const [data, setData] = useState({});
   const [temp, setTemp] = useState(0);
   const [isC, setIsC] = useState(true);
-  
+
   useEffect(() => {
     const success = (pos) => {
       const lat = pos.coords.latitude;
@@ -19,15 +19,16 @@ function App() {
           setData(res.data);
           setTemp(res.data?.main.temp);
         });
-    };
-    navigator.geolocation.getCurrentPosition(success);
+      };
+      console.log(data);
+      navigator.geolocation.getCurrentPosition(success);
   }, []);
 
   console.log(temp);
 
   const changeTemp = () => {
     if (isC) {
-      setTemp((temp * 9) / 5) + 32;
+      setTemp((temp * 9 / 5) + 32);
       setIsC(false);
     } else {
       setTemp((temp - 32) * 5/9);
@@ -50,11 +51,11 @@ function App() {
             />
             <h3>"{data.weather?.[0].main}"</h3>
             <h3>
-              {temp} {isC ? "°C" : "°F"}
+              {temp.toFixed(2)} {isC ? "°C" : "°F"}
             </h3>
           </div>
           <div className="moreInf">
-            <h3>"{data.weather?.[0].description}"</h3>
+            <h3 className="center">"{data.weather?.[0].description}"</h3>
             <h3>Wind speed: {data.wind?.speed} m/s</h3>
             <h3>Humidity: {data.main?.humidity}%</h3>
             <h3>Pressure: {data.main?.pressure} mb</h3>

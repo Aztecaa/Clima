@@ -19,6 +19,18 @@ body{
   display: flex;
   justify-content: space-evenly;
 }
+
+
+.moreInf{
+  text-align: left;
+}
+.center{
+  text-align: center;
+}
+
+.title h1{
+  color: rgb(145, 67, 182);
+}
 .title h2{
   text-align: center;
   font-size: 12px;
@@ -27,6 +39,12 @@ img{
   width: 50px;
 }
 button{
-  background-color: brown;
+  color: #fff;
+  border-radius: 3px;
+  background-color: rgb(145, 67, 182);
   border: none;
+}
+button:hover{
+  cursor: pointer;
+  background-color: rgb(132, 29, 180);
 }
