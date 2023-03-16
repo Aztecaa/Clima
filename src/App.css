@@ -1,10 +1,17 @@
+:root{
+  --color-bg: 
+}
+
 .App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 12px;
+  font-size: 24px;
 }
 body{
-  padding-top: 20px;
-  background-color: grey;
+  background: radial-gradient(rgb(243, 216, 255), rgb(221, 158, 250), rgb(145, 67, 182));
 }
 
 .container{
@@ -13,7 +20,7 @@ body{
   box-shadow: 2px 2px 8px;
   margin: auto;
   background-color: #fff;
-  width: 300px;
+  width: 500px;
 }
 .inf{
   display: flex;
@@ -33,12 +40,13 @@ body{
 }
 .title h2{
   text-align: center;
-  font-size: 12px;
+  font-size: 32px;
 }
 img{
   width: 50px;
 }
 button{
+  font-size: 18px;
   color: #fff;
   border-radius: 3px;
   background-color: rgb(145, 67, 182);

@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
+  const [bgColor, setBgColor] = useState("")
   const [data, setData] = useState({});
   const [temp, setTemp] = useState(0);
   const [isC, setIsC] = useState(true);
@@ -20,11 +21,12 @@ function App() {
           setTemp(res.data?.main.temp);
         });
       };
-      console.log(data);
       navigator.geolocation.getCurrentPosition(success);
   }, []);
 
-  console.log(temp);
+
+
+  console.log(data);
 
   const changeTemp = () => {
     if (isC) {
